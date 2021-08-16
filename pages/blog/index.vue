@@ -2,10 +2,15 @@
   <div>
     <Header />
     <h1>blog一覧</h1>
-    <article v-for="article in articles" :key="article.slug">
-      <NuxtLink to="/blog/article.slug">
-        <h1>{{ article.title }}</h1>
-      </NuxtLink>
+    <article>
+      <Card
+        v-for="(article, index) in articles"
+        :key="index"
+        :title="article.title"
+        :description="article.description"
+        :category="article.category"
+        :slug="{ name: 'blog-slug', params: { slug: article.slug } }"
+      />
     </article>
   </div>
 </template>

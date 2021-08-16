@@ -1,12 +1,12 @@
 ---
-title: Introduction
+title: Nuxtでブログ作りました
 description: Learn how to use @nuxt/content.
 category: dev
 ---
 
-# markdown テスト
+# Nuxtでブログ作りました
 
-## マークダウンテストです。
+## 楽しかったです
 
 teusto
 同期される

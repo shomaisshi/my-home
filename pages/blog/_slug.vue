@@ -1,17 +1,57 @@
 <template>
   <div>
     <Header />
-    <p>詳細ページ</p>
-    <h1>{{ this.slug }}</h1>
-    <nuxt-content :document="slug" />
+    <article>
+      <p>{{ formatDate(article.createdAt) }}</p>
+      <nav>
+        <ul>
+          <li v-for="link of article.toc" :key="link.id">
+            <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+          </li>
+        </ul>
+      </nav>
+      <nuxt-content :document="article" />
+      <prev-next :prev="prev" :next="next" />
+    </article>
   </div>
 </template>
 
 <script>
 export default {
-  async asyncData({ params }) {
-    const slug = params.slug; // When calling /abc the slug will be "abc"
-    return { slug };
+  async asyncData({ $content, params }) {
+    const article = await $content("blog", params.slug).fetch();
+
+    const [prev, next] = await $content("blog")
+      .only(["title", "slug"])
+      .sortBy("createdAt", "asc")
+      .surround(params.slug)
+      .fetch();
+
+    return {
+      article,
+      prev,
+      next,
+    };
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
+    },
   },
 };
 </script>
+
+<style>
+/* .nuxt-content h2 {
+  font-weight: bold;
+  font-size: 28px;
+}
+.nuxt-content h3 {
+  font-weight: bold;
+  font-size: 22px;
+}
+.nuxt-content p {
+  margin-bottom: 20px;
+} */
+</style>
