@@ -1,6 +1,6 @@
 <template>
   <div>
     <Header />
-    <p>home</p>
+    <h1>works一覧</h1>
   </div>
 </template>

@@ -2,8 +2,9 @@
   <div class="header">
     <h1><NuxtLink to="/">shomaisshi</NuxtLink></h1>
     <div id="nav">
-      <NuxtLink to="/">Home</NuxtLink> |
-      <NuxtLink to="/portfolio/test">About</NuxtLink>
+      <NuxtLink to="/works">works</NuxtLink> |
+      <NuxtLink to="/blog">blog</NuxtLink> |
+      <NuxtLink to="/about">About</NuxtLink>
     </div>
   </div>
 </template>
@@ -49,10 +50,10 @@ a:hover {
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #333;
 }
 
-#nav a.router-link-exact-active {
+#nav a.nuxt-link-exact-active {
   color: #3b6ace;
 }
 </style>
