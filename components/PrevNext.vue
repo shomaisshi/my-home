@@ -36,15 +36,11 @@ export default {
 
 <style scoped>
 .container {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
   width: 100%;
-  padding: 0 24px 24px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 64px;
 }
 
 .container a {
