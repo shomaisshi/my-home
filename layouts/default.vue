@@ -2,6 +2,7 @@
   <div>
     <Header />
     <Nuxt />
+    <Footer />
     <!-- <TheFooter /> -->
   </div>
 </template>
@@ -10,6 +11,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #3b6ace;
 }
 
 .main-content {

@@ -40,7 +40,7 @@ export default {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
 }
 
 .container a {

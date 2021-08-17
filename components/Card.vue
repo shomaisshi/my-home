@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+a {
+  color: #333;
 }
 </style>

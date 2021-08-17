@@ -1,6 +1,7 @@
 <template>
   <div>
     <article class="main-content">
+      <NuxtLink to="/blog">/blog</NuxtLink>
       <p>{{ formatDate(article.createdAt) }}</p>
       <!-- <nav>
         <ul>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main-content">
-      <h1>blog</h1>
+      <!-- <h1>blog</h1> -->
       <article>
         <Card
           v-for="(article, index) in articles"
