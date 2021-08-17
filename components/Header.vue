@@ -36,7 +36,7 @@ export default {
 a {
   text-decoration: none;
   color: #333;
-  padding: 16px 8px;
+  padding: 16px 0;
 }
 
 a:hover {

@@ -1,15 +1,14 @@
 <template>
   <div>
-    <Header />
-    <article>
+    <article class="main-content">
       <p>{{ formatDate(article.createdAt) }}</p>
-      <nav>
+      <!-- <nav>
         <ul>
           <li v-for="link of article.toc" :key="link.id">
             <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
           </li>
         </ul>
-      </nav>
+      </nav> -->
       <nuxt-content :document="article" />
       <prev-next :prev="prev" :next="next" />
     </article>
@@ -23,7 +22,7 @@ export default {
 
     const [prev, next] = await $content("blog")
       .only(["title", "slug"])
-      .sortBy("createdAt", "asc")
+      .sortBy("createdAt", "desc")
       .surround(params.slug)
       .fetch();
 
@@ -36,14 +35,14 @@ export default {
   methods: {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
-      return new Date(date).toLocaleDateString("en", options);
+      return new Date(date).toLocaleDateString("ja", options);
     },
   },
 };
 </script>
 
 <style>
-/* .nuxt-content h2 {
+.nuxt-content h2 {
   font-weight: bold;
   font-size: 28px;
 }
@@ -53,5 +52,5 @@ export default {
 }
 .nuxt-content p {
   margin-bottom: 20px;
-} */
+}
 </style>

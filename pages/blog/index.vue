@@ -1,24 +1,27 @@
 <template>
   <div>
-    <Header />
-    <h1>blog一覧</h1>
-    <article>
-      <Card
-        v-for="(article, index) in articles"
-        :key="index"
-        :title="article.title"
-        :description="article.description"
-        :category="article.category"
-        :slug="{ name: 'blog-slug', params: { slug: article.slug } }"
-      />
-    </article>
+    <div class="main-content">
+      <h1>blog</h1>
+      <article>
+        <Card
+          v-for="(article, index) in articles"
+          :key="index"
+          :title="article.title"
+          :description="article.description"
+          :category="article.category"
+          :slug="{ name: 'blog-slug', params: { slug: article.slug } }"
+        />
+      </article>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const articles = await $content("blog", params.slug).fetch();
+    const articles = await $content("blog", params.slug)
+      .sortBy("createdAt", "desc")
+      .fetch();
 
     return {
       articles,
@@ -26,3 +29,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>

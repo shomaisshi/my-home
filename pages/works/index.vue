@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <Header />
-    <h1>works一覧</h1>
+  <div class="main-content">
+    <h1>works</h1>
   </div>
 </template>
+
+<style scoped>
+</style>
