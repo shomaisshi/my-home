@@ -5,10 +5,9 @@
       <nav class="nav">
         <NuxtLink to="/works">works</NuxtLink>
         <NuxtLink to="/blog">blog</NuxtLink>
-        <NuxtLink to="/about">About</NuxtLink>
+        <NuxtLink to="/about">about</NuxtLink>
       </nav>
     </div>
-    <div class="HeaderHeight"></div>
   </div>
 </template>
 
@@ -22,17 +21,12 @@ export default {
 
 <style scoped>
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin: 0 auto;
   margin-bottom: 24px;
-  padding: 8px;
+  /* padding: 8px; */
   max-width: 600px;
   width: 100%;
   color: #333;
@@ -52,11 +46,10 @@ h1 {
 
 .nav a {
   font-weight: bold;
-  color: rgb(165, 165, 165);
 }
 
 .nav a + a {
-  margin-left: 16px;
+  margin-left: 8px;
 }
 
 .nav a.nuxt-link-exact-active {
@@ -72,15 +65,8 @@ a:hover {
   opacity: 0.8;
 }
 
-.HeaderHeight {
-  height: 72px;
-  width: 100%;
-}
-
 @media screen and (min-width: 600px) {
   .header {
-    flex-direction: row;
-    align-items: center;
     padding-top: 24px;
   }
 
