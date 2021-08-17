@@ -5,7 +5,7 @@
       v-if="prev"
       :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
     >
-      ←{{ prev.title }}
+      &larr;{{ prev.title }}
     </NuxtLink>
     <span v-else>&nbsp;</span>
 
@@ -13,7 +13,7 @@
       v-if="next"
       :to="{ name: 'blog-slug', params: { slug: next.slug } }"
     >
-      {{ next.title }}→
+      {{ next.title }}&rarr;
     </NuxtLink>
     <span v-else>&nbsp;</span>
   </div>
@@ -47,5 +47,15 @@ export default {
   color: #3b6ace;
   text-decoration: none;
   font-weight: 600;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    margin-bottom: 0;
+  }
 }
 </style>

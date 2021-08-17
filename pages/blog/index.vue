@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="main-content">
-      <!-- <h1>blog</h1> -->
-      <article>
+      <NuxtLink to="/">&lt; top</NuxtLink>
+      <p>blog</p>
+      <article class="blog-articles">
         <Card
           v-for="(article, index) in articles"
           :key="index"

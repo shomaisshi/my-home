@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header">
+    <div class="Header">
       <h1><NuxtLink to="/">shomaisshi</NuxtLink></h1>
       <nav class="nav">
         <NuxtLink to="/works">works</NuxtLink>
@@ -20,13 +20,12 @@ export default {
 </script>
 
 <style scoped>
-.header {
+.Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  margin-bottom: 24px;
-  /* padding: 8px; */
+  margin: 24px auto;
+  padding: 0;
   max-width: 600px;
   width: 100%;
   color: #333;
@@ -66,12 +65,8 @@ a:hover {
 }
 
 @media screen and (min-width: 600px) {
-  .header {
-    padding-top: 24px;
-  }
-
-  .HeaderHeight {
-    height: 96px;
+  .Header {
+    margin-top: 48px;
   }
 }
 </style>

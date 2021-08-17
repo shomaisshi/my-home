@@ -1,16 +1,9 @@
 <template>
   <div>
     <article class="main-content">
-      <NuxtLink to="/blog">&lt; top / blog</NuxtLink>
+      <NuxtLink to="/works">&lt; top / works</NuxtLink>
       <h1 class="main-content-h1">{{ article.title }}</h1>
-      <p class="main-content-date">{{ formatDate(article.createdAt) }}</p>
-      <!-- <nav>
-        <ul>
-          <li v-for="link of article.toc" :key="link.id">
-            <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-          </li>
-        </ul>
-      </nav> -->
+      <p class="main-content-date">{{ article.date }}</p>
       <nuxt-content :document="article" />
       <prev-next :prev="prev" :next="next" />
     </article>
@@ -20,9 +13,9 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const article = await $content("blog", params.slug).fetch();
+    const article = await $content("works", params.slug).fetch();
 
-    const [prev, next] = await $content("blog")
+    const [prev, next] = await $content("works")
       .only(["title", "slug"])
       .sortBy("createdAt", "desc")
       .surround(params.slug)

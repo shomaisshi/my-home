@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'my-home',
+    title: 'shomaisshi',
     htmlAttrs: {
       lang: 'ja'
     },
