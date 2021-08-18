@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="main-content">
-      <NuxtLink to="/">&lt; top</NuxtLink>
-      <p>works</p>
+      <h1 class="works-heading">works</h1>
       <article class="works-articles">
         <Card
           v-for="(article, index) in articles"

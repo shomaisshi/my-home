@@ -1,8 +1,7 @@
 <template>
   <div class="main-content">
-    <NuxtLink to="/">&lt; top</NuxtLink>
+    <PrevButton prevLink="/" prevHeading="top" />
     <article class="about-article">
-      <p>about</p>
       <h1>{{ article.title }}</h1>
       <nuxt-content :document="article" />
     </article>
@@ -18,5 +17,6 @@ export default {
       article,
     };
   },
+  layout: "page",
 };
 </script>

@@ -22,6 +22,19 @@ a {
   max-width: 600px;
 }
 
+/* index style */
+.works-heading {
+  color: #3b6ace;
+}
+
+.blog-heading {
+  color: rgb(255, 196, 0);
+}
+
+.about-heading {
+  color: indianred;
+}
+
 /* articles */
 .works-articles h1::before {
   content: "# ";
@@ -30,10 +43,10 @@ a {
 
 .blog-articles h1::before {
   content: "# ";
-  color: forestgreen;
+  color: rgb(255, 196, 0);
 }
 
-.about-article h1::before {
+.about-container .about-article h1::before {
   content: "# ";
   color: indianred;
 }

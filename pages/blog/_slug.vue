@@ -1,7 +1,7 @@
 <template>
   <div>
     <article class="main-content">
-      <NuxtLink to="/blog">&lt; top / blog</NuxtLink>
+      <PrevButton prevLink="/blog" prevHeading="blog" />
       <h1 class="main-content-h1">{{ article.title }}</h1>
       <p class="main-content-date">{{ formatDate(article.createdAt) }}</p>
       <!-- <nav>
@@ -40,5 +40,6 @@ export default {
       return new Date(date).toLocaleDateString("ja", options);
     },
   },
+  layout: "page",
 };
 </script>

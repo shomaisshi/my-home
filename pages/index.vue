@@ -2,7 +2,7 @@
   <div>
     <div class="main-content">
       <div class="works-container">
-        <p>works</p>
+        <h1 class="works-heading">works</h1>
         <article class="works-articles">
           <Card
             v-for="(article, index) in worksArticles"
@@ -17,7 +17,7 @@
       </div>
 
       <div class="blog-container">
-        <p>blog</p>
+        <h1 class="blog-heading">blog</h1>
         <article class="blog-articles">
           <Card
             v-for="(article, index) in blogArticles"
@@ -32,7 +32,7 @@
       </div>
 
       <div class="about-container">
-        <p>about</p>
+        <h1 class="about-heading">about</h1>
         <article class="about-article">
           <NuxtLink :to="aboutArticle.slug">
             <h1>{{ aboutArticle.title }}</h1>

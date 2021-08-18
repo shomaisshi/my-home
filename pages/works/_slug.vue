@@ -1,7 +1,7 @@
 <template>
   <div>
     <article class="main-content">
-      <NuxtLink to="/works">&lt; top / works</NuxtLink>
+      <PrevButton prevLink="/works" prevHeading="works" />
       <h1 class="main-content-h1">{{ article.title }}</h1>
       <p class="main-content-date">{{ article.date }}</p>
       <nuxt-content :document="article" />
@@ -33,5 +33,6 @@ export default {
       return new Date(date).toLocaleDateString("ja", options);
     },
   },
+  layout: "page",
 };
 </script>
