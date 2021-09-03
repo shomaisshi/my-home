@@ -68,6 +68,7 @@ a {
 }
 
 .nuxt-content h2 {
+  margin-top: 40px;
   font-size: 24px;
 }
 
@@ -78,5 +79,10 @@ a {
 .nuxt-content p {
   font-size: 16px;
   line-height: 1.8;
+}
+
+.nuxt-content ul {
+  margin: 0;
+  padding-left: 20px;
 }
 </style>

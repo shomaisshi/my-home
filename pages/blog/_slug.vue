@@ -3,7 +3,7 @@
     <article class="main-content">
       <PrevButton prevLink="/blog" prevHeading="blog" />
       <h1 class="main-content-h1">{{ article.title }}</h1>
-      <p class="main-content-date">{{ formatDate(article.createdAt) }}</p>
+      <!-- <p class="main-content-date">{{ formatDate(article.createdAt) }}</p> -->
       <!-- <nav>
         <ul>
           <li v-for="link of article.toc" :key="link.id">
