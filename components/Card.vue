@@ -1,9 +1,11 @@
 <template>
   <div class="container">
     <NuxtLink :to="slug">
-      <h1>{{ title }}</h1>
-      <p>{{ description }}</p>
-      <!-- <p>{{ category }}</p> -->
+      <div class="padding">
+        <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
+        <!-- <p>{{ category }}</p> -->
+      </div>
     </NuxtLink>
   </div>
 </template>
@@ -21,6 +23,19 @@ export default {
 
 <style scoped>
 a {
-  color: #333;
+  color: #525252;
+}
+.padding {
+  padding: 8px 16px;
+}
+.container {
+  border-radius: 12px;
+  transition: 0.1s;
+}
+.container:hover {
+  background: #f5f5f5;
+}
+h1 {
+  font-size: clamp(16px, 5vw, 20px);
 }
 </style>

@@ -15,8 +15,11 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+もしくは
+$ npm run generate
 
 # deploy
+エラーが出たらpushする
 $ npm run deploy
 ```
 

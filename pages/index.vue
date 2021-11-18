@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main-content">
-      <div class="works-container">
+      <!-- <div class="works-container">
         <h1 class="works-heading">works</h1>
         <article class="works-articles">
           <Card
@@ -14,10 +14,10 @@
           />
         </article>
         <NuxtLink to="/works">&rarr; more works..</NuxtLink>
-      </div>
+      </div> -->
 
       <div class="blog-container">
-        <h1 class="blog-heading">blog</h1>
+        <!-- <h1 class="blog-heading">blog</h1> -->
         <article class="blog-articles">
           <Card
             v-for="(article, index) in blogArticles"
@@ -28,10 +28,10 @@
             :slug="{ name: 'blog-slug', params: { slug: article.slug } }"
           />
         </article>
-        <NuxtLink to="/blog">&rarr; more blog..</NuxtLink>
+        <!-- <NuxtLink to="/blog">&rarr; more blog..</NuxtLink> -->
       </div>
 
-      <div class="about-container">
+      <!-- <div class="about-container">
         <h1 class="about-heading">about</h1>
         <article class="about-article">
           <NuxtLink :to="aboutArticle.slug">
@@ -39,7 +39,7 @@
             <p>{{ aboutArticle.description }}</p>
           </NuxtLink>
         </article>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -54,7 +54,6 @@ export default {
 
     const blogArticles = await $content("blog", params.slug)
       .sortBy("createdAt", "desc")
-      .limit(3)
       .fetch();
 
     const aboutArticle = await $content("about/about", params.slug).fetch();

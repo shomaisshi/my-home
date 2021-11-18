@@ -44,9 +44,18 @@ export default {
 }
 
 .container a {
-  color: #3b6ace;
+  color: #c2c2c2;
+
   text-decoration: none;
   font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: all 0.1s;
+}
+
+.container a:hover {
+  color: rgb(255, 196, 0);
+  background: rgb(255, 252, 240);
 }
 
 @media screen and (min-width: 600px) {

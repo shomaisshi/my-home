@@ -9,12 +9,14 @@
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #333;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  color: #525252;
 }
 
 a {
   text-decoration: none;
-  color: #3b6ace;
+  color: rgb(238, 183, 0);
 }
 
 .main-content {
@@ -63,13 +65,15 @@ a {
 }
 
 .main-content-h1 {
-  font-size: 32px;
-  margin-bottom: 0;
+  font-size: clamp(16px, 5vw, 20px);
+  margin-top: clamp(24px, 5vw, 56px);
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .nuxt-content h2 {
   margin-top: 40px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .nuxt-content h3 {
@@ -77,6 +81,7 @@ a {
 }
 
 .nuxt-content p {
+  margin-top: 32px;
   font-size: 16px;
   line-height: 1.8;
 }
@@ -84,5 +89,6 @@ a {
 .nuxt-content ul {
   margin: 0;
   padding-left: 20px;
+  line-height: 1.8;
 }
 </style>
