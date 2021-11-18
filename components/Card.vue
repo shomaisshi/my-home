@@ -36,6 +36,6 @@ a {
   background: #f5f5f5;
 }
 h1 {
-  font-size: clamp(16px, 5vw, 20px);
+  font-size: clamp(16px, 5vw, 18px);
 }
 </style>

@@ -16,7 +16,7 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(238, 183, 0);
+  color: rgb(255, 196, 0);
 }
 
 .main-content {
