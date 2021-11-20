@@ -2,7 +2,7 @@
   <div class="Card">
     <NuxtLink :to="slug">
       <div class="flex">
-        <img :src="`/cover/${cover}`" alt="カバー画像" />
+        <img :src="`/my-home/cover/${cover}`" alt="カバー画像" />
         <div class="padding">
           <h1 class="Card__h1">{{ title }}</h1>
           <p class="Card__p">{{ description }}</p>
@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 img {
-  width: 25%;
+  width: 30%;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 10px 0 0 10px;
@@ -52,10 +52,11 @@ a {
   box-sizing: border-box;
 }
 .Card__h1 {
-  font-size: clamp(16px, 5vw, 18px);
+  font-size: 16px;
   margin: 0;
 }
 .Card__p {
+  display: none;
   font-size: 14px;
   color: var(--main-gray);
 }
@@ -73,6 +74,12 @@ a {
     aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+  }
+  .Card__h1 {
+    font-size: 18px;
+  }
+  .Card__p {
+    display: block;
   }
 }
 </style>

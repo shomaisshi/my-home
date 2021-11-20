@@ -4,7 +4,7 @@
       <!-- <PrevButton prevLink="/blog" prevHeading="blog" /> -->
       <img
         class="main-content-img"
-        :src="`/cover/${article.cover}`"
+        :src="`/my-home/cover/${article.cover}`"
         alt="カバー画像"
       />
       <div class="main-contentContainer">

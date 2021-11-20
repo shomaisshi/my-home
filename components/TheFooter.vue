@@ -4,10 +4,10 @@
 
 <style scoped>
 .Footer {
-  margin-top: 24px;
-  height: 0;
-  /* height: 400px; */
+  margin-top: 32px;
+  /* height: 0; */
+  height: 200px;
   width: 100%;
-  background: #fff;
+  background: var(--main-color);
 }
 </style>
