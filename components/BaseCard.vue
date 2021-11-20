@@ -30,6 +30,7 @@ img {
   width: 30%;
   aspect-ratio: 1/1;
   object-fit: cover;
+  /* object-position: 50% 90%; */
   border-radius: 10px 0 0 10px;
 }
 a {
@@ -45,8 +46,8 @@ a {
 }
 .Card {
   border-radius: 12px;
-  border: 1px solid #cdcdcd;
-  /* box-shadow: var(--shadow); */
+  /* border: 1px solid #cdcdcd; */
+  box-shadow: var(--shadow);
   transition: 0.3s;
   background: #fff;
   box-sizing: border-box;
@@ -71,8 +72,8 @@ a {
   }
   img {
     width: 100%;
+    /* aspect-ratio: 1.2/1; */
     aspect-ratio: 16/9;
-    object-fit: cover;
     border-radius: 10px 10px 0 0;
   }
   .Card__h1 {

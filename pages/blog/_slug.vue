@@ -56,31 +56,30 @@ export default {
 /* slug style */
 .main-content {
   max-width: var(--main-width);
-  border: 1px solid #cdcdcd;
-  /* box-shadow: var(--shadow); */
   overflow: hidden;
   background: #fff;
   box-sizing: border-box;
 }
 @media screen and (min-width: 640px) {
   .main-content {
+    /* border: 1px solid #cdcdcd; */
+    box-shadow: var(--shadow);
     border-radius: 12px;
   }
 }
 .main-content-h1 {
-  font-size: clamp(16px, 5vw, 20px);
-  /* margin-top: clamp(24px, 5vw, 56px); */
+  font-size: clamp(16px, 5vw, 28px);
   margin-bottom: 24px;
 }
 .main-content-date {
   font-size: 14px;
   color: rgb(155, 155, 155);
-  /* margin-bottom: 32px; */
 }
 .main-content-img {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
+  /* object-position: 50% 90%; */
 }
 .main-contentContainer {
   padding: 24px;
@@ -92,7 +91,9 @@ export default {
 /* md style */
 .nuxt-content h2 {
   margin-top: 40px;
-  font-size: 20px;
+  padding-left: 8px;
+  font-size: 24px;
+  border-left: 8px solid var(--main-color);
 }
 .nuxt-content h3 {
   font-size: 20px;
@@ -108,6 +109,11 @@ export default {
   line-height: 1.8;
 }
 .nuxt-content img {
-  height: 324px;
+  /* height: 324px; */
+  width: 100%;
+}
+.nuxt-content hr {
+  margin-top: 32px;
+  border-top: 2px dashed var(--main-gray);
 }
 </style>

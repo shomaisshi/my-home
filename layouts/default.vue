@@ -33,7 +33,7 @@
   --main-black: #333;
   --main-gray: #acacac;
   --main-lightgray: #f4f4f4;
-  --shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   --main-width: 640px;
 }
 body {

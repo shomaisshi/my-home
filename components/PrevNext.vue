@@ -1,10 +1,17 @@
 <template>
-  <div class="container">
+  <div class="PrevNext">
     <NuxtLink
       v-if="prev"
       :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
     >
-      &larr;{{ prev.title }}
+      <div class="PrevNextContainer">
+        <img
+          class="PrevNext__icon"
+          src="~/assets/icons/arrow-left-solid.svg"
+          alt="前の記事を指す矢印"
+        />
+        <span class="PrevNext__title">{{ prev.title }}</span>
+      </div>
     </NuxtLink>
     <span v-else>&nbsp;</span>
 
@@ -12,7 +19,14 @@
       v-if="next"
       :to="{ name: 'blog-slug', params: { slug: next.slug } }"
     >
-      {{ next.title }}&rarr;
+      <div class="PrevNextContainer">
+        <span class="PrevNext__title">{{ next.title }}</span>
+        <img
+          class="PrevNext__icon"
+          src="~/assets/icons/arrow-right-solid.svg"
+          alt="次の記事を指す矢印"
+        />
+      </div>
     </NuxtLink>
     <span v-else>&nbsp;</span>
   </div>
@@ -34,28 +48,41 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.PrevNext {
+  padding: 8px 12px;
   width: 100%;
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  box-sizing: border-box;
 }
-.container a {
-  max-width: 144px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #c2c2c2;
+.PrevNext a {
+  color: var(--main-gray);
   text-decoration: none;
   font-weight: 600;
   padding: 8px 16px;
   border-radius: 10px;
   transition: all 0.1s;
 }
-.container a:hover {
+.PrevNext a:hover {
   color: var(--main-color);
-  background: rgb(255, 252, 240);
+  /* background: rgb(255, 252, 240); */
+}
+.PrevNextContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.PrevNext__title {
+  display: inline-block;
+  max-width: 144px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.PrevNext__icon {
+  display: inline-block;
+  width: 14px;
+  padding-bottom: 2px;
 }
 
 /* @media screen and (min-width: 600px) {

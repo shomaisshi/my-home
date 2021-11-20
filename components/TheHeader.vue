@@ -31,7 +31,7 @@ export default {
   margin-bottom: 24px;
   padding: 16px 24px;
   width: 100%;
-  color: #333;
+  color: var(--main-black);
   /* background: rgb(250, 250, 250); */
   z-index: 9999;
   box-sizing: border-box;
