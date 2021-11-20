@@ -1,27 +1,14 @@
 <template>
   <div>
     <div class="main-content">
-      <!-- <div class="works-container">
-        <h1 class="works-heading">works</h1>
-        <article class="works-articles">
-          <Card
-            v-for="(article, index) in worksArticles"
-            :key="index"
-            :title="article.title"
-            :description="article.description"
-            :category="article.category"
-            :slug="{ name: 'works-slug', params: { slug: article.slug } }"
-          />
-        </article>
-        <NuxtLink to="/works">&rarr; more works..</NuxtLink>
-      </div> -->
-
       <div class="blog-container">
         <!-- <h1 class="blog-heading">blog</h1> -->
         <article class="blog-articles">
-          <Card
+          <BaseCard
+            class="blog-card"
             v-for="(article, index) in blogArticles"
             :key="index"
+            :cover="article.cover"
             :title="article.title"
             :description="article.description"
             :category="article.category"
@@ -30,16 +17,6 @@
         </article>
         <!-- <NuxtLink to="/blog">&rarr; more blog..</NuxtLink> -->
       </div>
-
-      <!-- <div class="about-container">
-        <h1 class="about-heading">about</h1>
-        <article class="about-article">
-          <NuxtLink :to="aboutArticle.slug">
-            <h1>{{ aboutArticle.title }}</h1>
-            <p>{{ aboutArticle.description }}</p>
-          </NuxtLink>
-        </article>
-      </div> -->
     </div>
   </div>
 </template>
@@ -47,29 +24,36 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const worksArticles = await $content("works", params.slug)
-      .sortBy("date", "desc")
-      .limit(3)
-      .fetch();
-
     const blogArticles = await $content("blog", params.slug)
-      .sortBy("createdAt", "desc")
+      .sortBy("date", "desc")
       .fetch();
-
-    const aboutArticle = await $content("about/about", params.slug).fetch();
 
     return {
-      worksArticles,
       blogArticles,
-      aboutArticle,
     };
   },
 };
 </script>
 
 <style scoped>
+.main-content {
+  max-width: var(--main-width);
+}
 .works-container,
 .blog-container {
   margin-bottom: 48px;
+}
+.blog-articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.blog-card:first-child {
+}
+@media screen and (min-width: 640px) {
+  .blog-articles {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
 }
 </style>

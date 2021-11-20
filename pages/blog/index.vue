@@ -3,7 +3,7 @@
     <div class="main-content">
       <!-- <h1 class="blog-heading">blog</h1> -->
       <article class="blog-articles">
-        <Card
+        <BaseCard
           v-for="(article, index) in articles"
           :key="index"
           :title="article.title"
@@ -20,7 +20,7 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content("blog", params.slug)
-      .sortBy("createdAt", "desc")
+      .sortBy("date", "desc")
       .fetch();
 
     return {

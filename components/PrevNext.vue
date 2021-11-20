@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <!-- <p>aaa</p> -->
     <NuxtLink
       v-if="prev"
       :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
@@ -42,23 +41,24 @@ export default {
   justify-content: space-between;
   margin-bottom: 8px;
 }
-
 .container a {
+  max-width: 144px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: #c2c2c2;
-
   text-decoration: none;
   font-weight: 600;
   padding: 8px 16px;
   border-radius: 10px;
   transition: all 0.1s;
 }
-
 .container a:hover {
-  color: rgb(255, 196, 0);
+  color: var(--main-color);
   background: rgb(255, 252, 240);
 }
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
   .container {
     position: fixed;
     bottom: 0;
@@ -66,5 +66,5 @@ export default {
     padding: 20px;
     margin-bottom: 0;
   }
-}
+} */
 </style>

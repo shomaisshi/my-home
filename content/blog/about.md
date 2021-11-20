@@ -1,10 +1,10 @@
 ---
+cover: cafe.JPG
 title: About
 description: 中の人
-createdAt: 2021/07/14
+date: 2021/07/14
+category: 日記
 ---
 
-加藤匠馬<br>
-Shoma Kato<br>
-Developer / Designer / Artist
+Developer / Designer
 

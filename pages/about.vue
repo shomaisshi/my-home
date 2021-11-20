@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <PrevButton prevLink="/" prevHeading="top" />
+    <!-- <PrevButton prevLink="/" prevHeading="top" /> -->
     <article class="about-article">
       <h1>{{ article.title }}</h1>
       <nuxt-content :document="article" />
