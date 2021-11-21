@@ -1,23 +1,15 @@
 <template>
   <div>
     <article class="main-content">
-      <!-- <PrevButton prevLink="/blog" prevHeading="blog" /> -->
       <img
         class="main-content-img"
         :src="`/my-home/cover/${article.cover}`"
         alt="カバー画像"
       />
       <div class="main-contentContainer">
-        <h1 class="main-content-h1">{{ article.title }}</h1>
         <p class="main-content-date">{{ article.date }}</p>
+        <h1 class="main-content-h1">{{ article.title }}</h1>
         <BaseCategory>{{ article.category }}</BaseCategory>
-        <!-- <nav>
-        <ul>
-          <li v-for="link of article.toc" :key="link.id">
-            <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-          </li>
-        </ul>
-      </nav> -->
         <nuxt-content :document="article" />
       </div>
       <prev-next :prev="prev" :next="next" />
@@ -68,12 +60,13 @@ export default {
   }
 }
 .main-content-h1 {
-  font-size: clamp(16px, 5vw, 28px);
+  margin: 0;
+  font-size: 32px;
   margin-bottom: 24px;
 }
 .main-content-date {
   font-size: 14px;
-  color: rgb(155, 155, 155);
+  color: var(--main-gray);
 }
 .main-content-img {
   width: 100%;
@@ -84,6 +77,16 @@ export default {
 .main-contentContainer {
   padding: 24px;
   box-sizing: border-box;
+}
+.main-content-nav {
+  background: var(--main-lightgray);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 640px) {
+  .main-content-h1 {
+    font-size: 32px;
+  }
 }
 </style>
 
@@ -115,5 +118,31 @@ export default {
 .nuxt-content hr {
   margin-top: 32px;
   border-top: 2px dashed var(--main-gray);
+}
+.nuxt-content a {
+  text-decoration: underline;
+}
+.nuxt-content a:not(h1 a, h2 a, h3 a, h4 a)::after {
+  content: "";
+  display: inline-block;
+  background: url("~assets/icons/external-link-alt-solid.svg");
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  margin-right: 8px;
+  vertical-align: -1px;
+}
+@media screen and (min-width: 640px) {
+  .nuxt-content h2 {
+    font-size: 28px;
+  }
+  .nuxt-content h3 {
+    font-size: 24px;
+  }
+  .nuxt-content p,
+  .nuxt-content ul {
+    font-size: 18px;
+  }
 }
 </style>

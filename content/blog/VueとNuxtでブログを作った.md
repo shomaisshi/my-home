@@ -1,15 +1,32 @@
 ---
-cover: Paper.png
-title: VueとNuxtでブログを作った
-description: ブラウザのリロードがなくなってアプリみたいに使えたらいいのに、と思っていた。
+cover: Paper2.png
+title: VueとNuxtでサクサク動く静的なブログを作った【Vue/Nuxt】
 date: 2021/11/18
-category: 日記
+category: 開発
 ---
 
-ブラウザのリロードがなくなってアプリみたいに使えたらいいのに、と思っていた。ReactやVueを使うことで、アプリとWebの境目がなくなってきたような操作感を作れるようになった。
+Webでも、**ブラウザのリロードがなくなってアプリみたいに使えたらいいのに**、と思っていた。ReactやVueを使うことで、アプリのような操作感のサイトを作れるようになった。
 
-今回はNuxtでブログを作成してみた。
+<!--more-->
+
+今回はNuxtでブログを作成してみた。ブログ作るの楽しいね、秘密基地を作ってるみたい。
+
+
+[NuxtJS](https://nuxtjs.org/ja/)
 
 ![画像](/my-home/cover/webスクリーンショット.png)
 
-次は、ブラウザ標準で簡単にSingle Page Applicationが作れるようになったらいいなと思ってる。
+プロジェクトのセットアップ
+
+```
+$ yarn create nuxt-app <project-name>
+```
+
+[http://localhost:3000](http://localhost:3000) で開発する
+
+```
+$ cd <project-name>
+$ yarn dev
+```
+
+

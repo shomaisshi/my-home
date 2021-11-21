@@ -28,22 +28,24 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
   padding: 16px 24px;
+  /* margin-bottom: 48px; */
   width: 100%;
   color: var(--main-black);
-  /* background: rgb(250, 250, 250); */
-  z-index: 9999;
+  background: #fff;
+  /* background: var(--main-lightgray); */
+  /* z-index: 9999; */
   box-sizing: border-box;
 }
 h1 {
   margin: 0;
+  height: 32px;
 }
 h1 a {
   color: #545454;
 }
 h1 img {
-  height: 32px;
+  height: 24px;
 }
 .nav {
   padding: 0;
@@ -65,7 +67,11 @@ a {
 }
 
 @media screen and (min-width: 640px) {
+  h1 {
+    height: 32px;
+  }
   .Header {
+    /* margin-bottom: 40px; */
     /* margin: 32px 0 40px; */
   }
 }

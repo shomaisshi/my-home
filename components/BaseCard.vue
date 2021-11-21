@@ -4,6 +4,7 @@
       <div class="flex">
         <img :src="`/my-home/cover/${cover}`" alt="カバー画像" />
         <div class="padding">
+          <p class="Card__date">{{ date }}</p>
           <h1 class="Card__h1">{{ title }}</h1>
           <p class="Card__p">{{ description }}</p>
           <BaseCategory class="Card__category">{{ category }}</BaseCategory>
@@ -18,6 +19,7 @@ export default {
   props: {
     cover: String,
     title: String,
+    date: String,
     description: String,
     category: String,
     slug: String,
@@ -34,15 +36,17 @@ img {
   border-radius: 10px 0 0 10px;
 }
 a {
-  color: #525252;
+  color: var(--main-black);
+}
+.flex {
+  display: flex;
+  height: 100%;
 }
 .padding {
   padding: 16px;
   display: flex;
   flex-direction: column;
-}
-.flex {
-  display: flex;
+  /* height: 100%; */
 }
 .Card {
   border-radius: 12px;
@@ -52,14 +56,20 @@ a {
   background: #fff;
   box-sizing: border-box;
 }
+.Card__date {
+  display: none;
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--main-gray);
+}
 .Card__h1 {
   font-size: 16px;
   margin: 0;
+  margin-bottom: 8px;
 }
 .Card__p {
   display: none;
-  font-size: 14px;
-  color: var(--main-gray);
 }
 .Card__category {
   margin-top: auto;
@@ -70,17 +80,38 @@ a {
     display: flex;
     flex-direction: column;
   }
+  .padding {
+    height: 100%;
+  }
   img {
     width: 100%;
     /* aspect-ratio: 1.2/1; */
     aspect-ratio: 16/9;
     border-radius: 10px 10px 0 0;
   }
+  .Card__date {
+    display: block;
+  }
   .Card__h1 {
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 0;
   }
   .Card__p {
+    font-size: 14px;
+    color: var(--main-gray);
+    /* ...で省略する */
     display: block;
+    overflow: hidden;
+    line-height: 16px;
+    height: 48px; /* 16px * 6 lines */
+  }
+  @supports (-webkit-line-clamp: 3) {
+    .Card__p {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
   }
 }
 </style>

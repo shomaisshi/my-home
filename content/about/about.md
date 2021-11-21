@@ -3,10 +3,9 @@ title: このサイトについて
 description: このサイトについて
 ---
 
-## 自己紹介
+## About
 
-加藤匠馬  
-Shoma Kato  
+KLEENOTE（クレーノート）  
 Developer / Designer
 
 ものづくりが好き。  

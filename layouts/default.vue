@@ -1,6 +1,7 @@
 <template>
   <div>
     <TheHeader />
+    <TheHeaderImage />
     <main class="main">
       <Nuxt />
       <TheProfile class="TheProfile" />
@@ -11,11 +12,13 @@
 
 <style scoped>
 .main {
+  margin-top: 16px;
   padding: 0 16px;
   box-sizing: border-box;
 }
 @media screen and (min-width: 640px) {
   .main {
+    margin-top: 40px;
     display: flex;
     justify-content: center;
   }
@@ -33,14 +36,16 @@
   --main-black: #333;
   --main-gray: #acacac;
   --main-lightgray: #f4f4f4;
-  --shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   --main-width: 640px;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: ui-rounded, "SF Compact Rounded", -apple-system,
+    "BlinkMacSystemFont", "Hiragino Sans", Helvetica, Meiryo, sans-serif;
   color: var(--main-black);
   margin: 0;
-  background: #fff;
+  /* background: #fff; */
+  background: var(--main-lightgray);
 }
 a {
   text-decoration: none;

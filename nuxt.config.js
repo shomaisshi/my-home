@@ -7,14 +7,14 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'shomaisshi',
+    title: 'KLEENOTE',
     htmlAttrs: {
       lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'KLEENOTE（クレーノート）のブログです。作ったものや、好きなものを紹介していきます。' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'theme-color', content: '#fff' }
     ],

@@ -2,7 +2,6 @@
   <div>
     <div class="main-content">
       <div class="blog-container">
-        <!-- <h1 class="blog-heading">blog</h1> -->
         <article class="blog-articles">
           <BaseCard
             class="blog-card"
@@ -10,12 +9,12 @@
             :key="index"
             :cover="article.cover"
             :title="article.title"
+            :date="article.date"
             :description="article.description"
             :category="article.category"
             :slug="{ name: 'blog-slug', params: { slug: article.slug } }"
           />
         </article>
-        <!-- <NuxtLink to="/blog">&rarr; more blog..</NuxtLink> -->
       </div>
     </div>
   </div>
@@ -25,6 +24,7 @@
 export default {
   async asyncData({ $content, params }) {
     const blogArticles = await $content("blog", params.slug)
+      .only(["cover", "title", "date", "description", "category", "slug"])
       .sortBy("date", "desc")
       .fetch();
 
@@ -39,7 +39,6 @@ export default {
 .main-content {
   max-width: var(--main-width);
 }
-.works-container,
 .blog-container {
   margin-bottom: 48px;
 }
@@ -47,8 +46,6 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-}
-.blog-card:first-child {
 }
 @media screen and (min-width: 640px) {
   .blog-articles {

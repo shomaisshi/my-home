@@ -9,5 +9,6 @@
   height: 200px;
   width: 100%;
   background: var(--main-color);
+  box-sizing: border-box;
 }
 </style>
