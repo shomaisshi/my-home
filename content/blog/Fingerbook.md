@@ -3,6 +3,7 @@ cover: block01.jpg
 title: Finger book
 date: 2018/4/12
 category: ポートフォリオ
+tags: [dev, portfolio]
 ---
 
 指で触ると言葉が出てきて、それに合わせて絵やギミックも動く絵本のカタチ。「言葉と身体との親和性がより高い読書体験」を作る。

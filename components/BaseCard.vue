@@ -5,9 +5,10 @@
         <img :src="`/my-home/cover/${cover}`" alt="カバー画像" />
         <div class="padding">
           <p class="Card__date">{{ date }}</p>
-          <h1 class="Card__h1">{{ title }}</h1>
+          <h2 class="Card__h2">{{ title }}</h2>
           <p class="Card__p">{{ description }}</p>
-          <BaseCategory class="Card__category">{{ category }}</BaseCategory>
+          <!-- <BaseCategory class="Card__category">{{ category }}</BaseCategory> -->
+          <BaseTags :tags="tags" class="Card__tags" />
         </div>
       </div>
     </NuxtLink>
@@ -22,6 +23,7 @@ export default {
     date: String,
     description: String,
     category: String,
+    tags: String,
     slug: String,
   },
 };
@@ -43,7 +45,7 @@ a {
   height: 100%;
 }
 .padding {
-  padding: 16px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   /* height: 100%; */
@@ -63,15 +65,28 @@ a {
   font-size: 14px;
   color: var(--main-gray);
 }
-.Card__h1 {
+.Card__h2 {
   font-size: 16px;
   margin: 0;
   margin-bottom: 8px;
+  /* ...で省略する */
+  display: block;
+  overflow: hidden;
+  line-height: 24px;
+  height: auto; /* 24px * 2 lines */
+}
+@supports (-webkit-line-clamp: 2) {
+  .Card__h2 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
 }
 .Card__p {
   display: none;
 }
-.Card__category {
+.Card__tags {
   margin-top: auto;
   align-self: flex-start;
 }
@@ -81,6 +96,7 @@ a {
     flex-direction: column;
   }
   .padding {
+    padding: 16px;
     height: 100%;
   }
   img {
@@ -92,9 +108,16 @@ a {
   .Card__date {
     display: block;
   }
-  .Card__h1 {
+  .Card__h2 {
     font-size: 20px;
     margin-bottom: 0;
+    overflow: auto;
+    height: auto;
+  }
+  @supports (-webkit-line-clamp: 3) {
+    .Card__h2 {
+      -webkit-line-clamp: 3;
+    }
   }
   .Card__p {
     font-size: 14px;
@@ -102,14 +125,14 @@ a {
     /* ...で省略する */
     display: block;
     overflow: hidden;
-    line-height: 16px;
-    height: 48px; /* 16px * 6 lines */
+    line-height: 18px;
+    height: auto; /* 16px * 6 lines */
   }
-  @supports (-webkit-line-clamp: 3) {
+  @supports (-webkit-line-clamp: 2) {
     .Card__p {
       display: -webkit-box;
       overflow: hidden;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
     }
   }

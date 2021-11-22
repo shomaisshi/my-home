@@ -11,6 +11,7 @@
         <h1 class="main-content-h1">{{ article.title }}</h1>
         <BaseCategory>{{ article.category }}</BaseCategory>
         <nuxt-content :document="article" />
+        <BaseTags :tags="article.tags" />
       </div>
       <prev-next :prev="prev" :next="next" />
     </article>

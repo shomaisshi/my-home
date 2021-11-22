@@ -6,6 +6,7 @@
       <Nuxt />
       <TheProfile class="TheProfile" />
     </main>
+    <BlockTags />
     <TheFooter />
   </div>
 </template>

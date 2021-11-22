@@ -12,6 +12,7 @@
             :date="article.date"
             :description="article.description"
             :category="article.category"
+            :tags="article.tags"
             :slug="{ name: 'blog-slug', params: { slug: article.slug } }"
           />
         </article>
@@ -24,7 +25,15 @@
 export default {
   async asyncData({ $content, params }) {
     const blogArticles = await $content("blog", params.slug)
-      .only(["cover", "title", "date", "description", "category", "slug"])
+      .only([
+        "cover",
+        "title",
+        "date",
+        "description",
+        "category",
+        "tags",
+        "slug",
+      ])
       .sortBy("date", "desc")
       .fetch();
 

@@ -3,6 +3,7 @@ cover: Paper2.png
 title: VueとNuxtでサクサク動く静的なブログを作った【Vue/Nuxt】
 date: 2021/11/18
 category: 開発
+tags: [dev, vue, nuxt]
 ---
 
 Webでも、**ブラウザのリロードがなくなってアプリみたいに使えたらいいのに**、と思っていた。ReactやVueを使うことで、アプリのような操作感のサイトを作れるようになった。
@@ -13,6 +14,7 @@ Webでも、**ブラウザのリロードがなくなってアプリみたいに
 
 
 [NuxtJS](https://nuxtjs.org/ja/)
+[nuxt content](https://content.nuxtjs.org/ja)
 
 ![画像](/my-home/cover/webスクリーンショット.png)
 
