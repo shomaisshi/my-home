@@ -2,7 +2,7 @@
 cover: consmotronica.jpg
 title: consmotronica
 description: 物理×エレクトロミュージック
-date: 2021/11/20
+date: 2020/12/20
 category: ポートフォリオ
 tags: [dev, portfolio, unity]
 ---

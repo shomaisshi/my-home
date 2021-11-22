@@ -11,7 +11,7 @@
         <h1 class="main-content-h1">{{ article.title }}</h1>
         <BaseCategory>{{ article.category }}</BaseCategory>
         <nuxt-content :document="article" />
-        <BaseTags :tags="article.tags" />
+        <BaseTags :tags="article.tags" class="main-content-tags" />
       </div>
       <prev-next :prev="prev" :next="next" />
     </article>
@@ -84,6 +84,9 @@ export default {
   border-radius: 10px;
   box-sizing: border-box;
 }
+.main-content-tags {
+  margin-top: 56px;
+}
 @media screen and (min-width: 640px) {
   .main-content-h1 {
     font-size: 32px;
@@ -94,22 +97,26 @@ export default {
 <style>
 /* md style */
 .nuxt-content h2 {
+  /* color: var(--main-color); */
   margin-top: 40px;
   padding-left: 8px;
+  /* padding-bottom: 8px; */
   font-size: 24px;
   border-left: 8px solid var(--main-color);
+  /* border-bottom: 2px dashed var(--main-color); */
 }
 .nuxt-content h3 {
   font-size: 20px;
 }
 .nuxt-content p {
   margin-top: 32px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
 }
 .nuxt-content ul {
   margin: 0;
   padding-left: 20px;
+  font-size: 18px;
   line-height: 1.8;
 }
 .nuxt-content img {

@@ -35,7 +35,7 @@
   --main-color: #d95e4d;
   /* --main-black: #525252; */
   --main-black: #333;
-  --main-gray: #acacac;
+  --main-gray: #9f9f9f;
   --main-lightgray: #f4f4f4;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   --main-width: 640px;

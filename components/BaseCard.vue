@@ -23,7 +23,7 @@ export default {
     date: String,
     description: String,
     category: String,
-    tags: String,
+    tags: Array,
     slug: String,
   },
 };

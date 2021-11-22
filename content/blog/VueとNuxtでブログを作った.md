@@ -1,34 +1,55 @@
 ---
 cover: Paper2.png
-title: VueとNuxtでサクサク動く静的なブログを作った【Vue/Nuxt】
+title: サクサク動く静的なブログ KLEENOTE（クレーノート）を作った【Vue/Nuxt】
 date: 2021/11/18
 category: 開発
 tags: [dev, vue, nuxt]
 ---
 
-Webでも、**ブラウザのリロードがなくなってアプリみたいに使えたらいいのに**、と思っていた。ReactやVueを使うことで、アプリのような操作感のサイトを作れるようになった。
-
-<!--more-->
-
-今回はNuxtでブログを作成してみた。ブログ作るの楽しいね、秘密基地を作ってるみたい。
-
-
-[NuxtJS](https://nuxtjs.org/ja/)
-[nuxt content](https://content.nuxtjs.org/ja)
+今回はVue・Nuxtを使ってブログを作成してみた。nuxt contentモジュールを使うことで、マークダウンファイルで記事を管理して、静的なブログをGithub Pagesにアップロードしている。
+Webサイトを作るのは、秘密基地を作ってるみたいで楽しい。
 
 ![画像](/my-home/cover/webスクリーンショット.png)
 
-プロジェクトのセットアップ
+[KLEENOTE（クレーノート）](https://shomaisshi.github.io/my-home/)
+
+<!--more-->
+
+前までは、Webサイトはページをタップするごとにリロードがあってサクサク見れるわけではなかった。最近はJavaScriptフレームワークのReactやVueを使うことで、**アプリのような操作感のサイトを作れるようになった**ので、また新しくWebサイトを作り始めた。
+
+VueやNuxtはドキュメントが日本語化されていて、デザインもわかりやすいので使うことにした。
+
+- [NuxtJS](https://nuxtjs.org/ja/)
+- [nuxt content](https://content.nuxtjs.org/ja)
+
+---
+
+
+以下のコマンドでNuxtプロジェクトの雛形を作れる。
 
 ```
 $ yarn create nuxt-app <project-name>
 ```
 
-[http://localhost:3000](http://localhost:3000) で開発する
+プロジェクトフォルダで `yarn dev` とコマンドを打つと、[http://localhost:3000](http://localhost:3000)で動作を確認しながら開発できる。
 
 ```
 $ cd <project-name>
 $ yarn dev
 ```
 
+あとはnuxt contentを入れて、マークダウンで記事を書き、コンポーネントベースでサイトのデザインをゴリゴリ作っていく。nuxt contentの使い方はNuxtの[ブログ]()がわかりやすい。
 
+---
+
+## ブログのコンセプト
+
+主に作ったアプリやゲームの紹介、好きなアプリやWebサイト、本の紹介、技術記事など書いていく。ブログを作った理由は、SNSをあまり使わなくなったのと、メディアサイトをデザインしてみたかったから。
+
+## ブログのデザインについて
+
+主にカードベースのデザインにしようと思った。
+
+---
+
+[KLEENOTE（クレーノート）](https://shomaisshi.github.io/my-home/)

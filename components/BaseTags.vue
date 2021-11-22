@@ -9,7 +9,7 @@
 <script>
 export default {
   props: {
-    tags: String,
+    tags: Array,
   },
 };
 </script>
