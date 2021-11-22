@@ -1,20 +1,23 @@
 <template>
   <div>
-    <article class="main-content">
-      <img
-        class="main-content-img"
-        :src="`/my-home/cover/${article.cover}`"
-        alt="カバー画像"
-      />
-      <div class="main-contentContainer">
-        <p class="main-content-date">{{ article.date }}</p>
-        <h1 class="main-content-h1">{{ article.title }}</h1>
-        <BaseCategory>{{ article.category }}</BaseCategory>
-        <nuxt-content :document="article" />
-        <BaseTags :tags="article.tags" class="main-content-tags" />
-      </div>
-      <prev-next :prev="prev" :next="next" />
-    </article>
+    <div class="slug">
+      <article class="main-content">
+        <img
+          class="main-content-img"
+          :src="`/my-home/cover/${article.cover}`"
+          alt="カバー画像"
+        />
+        <div class="main-contentContainer">
+          <p class="main-content-date">{{ article.date }}</p>
+          <h1 class="main-content-h1">{{ article.title }}</h1>
+          <BaseCategory>{{ article.category }}</BaseCategory>
+          <nuxt-content :document="article" />
+          <BaseTags :tags="article.tags" class="main-content-tags" />
+        </div>
+        <prev-next :prev="prev" :next="next" />
+      </article>
+      <TheProfile class="TheProfile" />
+    </div>
   </div>
 </template>
 
@@ -47,6 +50,17 @@ export default {
 
 <style scoped>
 /* slug style */
+@media screen and (min-width: 640px) {
+  .slug {
+    display: flex;
+    justify-content: center;
+  }
+  .TheProfile {
+    margin-left: 24px;
+    align-self: flex-start;
+  }
+}
+
 .main-content {
   max-width: var(--main-width);
   overflow: hidden;
@@ -110,13 +124,12 @@ export default {
 }
 .nuxt-content p {
   margin-top: 32px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
 }
 .nuxt-content ul {
   margin: 0;
   padding-left: 20px;
-  font-size: 18px;
   line-height: 1.8;
 }
 .nuxt-content img {
@@ -140,6 +153,21 @@ export default {
   margin-left: 4px;
   margin-right: 8px;
   vertical-align: -1px;
+}
+.nuxt-content pre {
+  color: var(--main-black);
+  background: var(--main-lightgray);
+  border-radius: 8px;
+}
+.nuxt-content p code {
+  display: inline-block;
+  padding: 1px 6px 0;
+  font-size: 14px;
+  color: var(--main-black);
+  background: var(--main-lightgray);
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: solid 1px #d6dde4;
 }
 @media screen and (min-width: 640px) {
   .nuxt-content h2 {

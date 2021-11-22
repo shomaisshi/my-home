@@ -31,14 +31,15 @@ VueやNuxtはドキュメントが日本語化されていて、デザインも�
 $ yarn create nuxt-app <project-name>
 ```
 
-プロジェクトフォルダで `yarn dev` とコマンドを打つと、[http://localhost:3000](http://localhost:3000)で動作を確認しながら開発できる。
+プロジェクトフォルダで `yarn dev` とコマンドを打つと、  
+[http://localhost:3000](http://localhost:3000)で動作を確認しながら開発できる。
 
 ```
 $ cd <project-name>
 $ yarn dev
 ```
 
-あとはnuxt contentを入れて、マークダウンで記事を書き、コンポーネントベースでサイトのデザインをゴリゴリ作っていく。nuxt contentの使い方はNuxtの[ブログ]()がわかりやすい。
+あとはnuxt contentを入れて、マークダウンで記事を書き、コンポーネントベースでサイトのデザインをゴリゴリ作っていく。nuxt contentの使い方はNuxtの[ブログ](https://nuxtjs.org/tutorials/creating-blog-with-nuxt-content/)がわかりやすい。
 
 ---
 

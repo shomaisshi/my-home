@@ -1,7 +1,7 @@
 ---
-cover: block01.jpg
+cover: スクリーンショット 2019-03-19 22.41.26.png
 title: Finger book
-date: 2018/4/12
+date: 2018/04/12
 category: ポートフォリオ
 tags: [dev, portfolio]
 ---

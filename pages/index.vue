@@ -2,6 +2,7 @@
   <div>
     <div class="main-content">
       <div class="blog-container">
+        <!-- <h2>新着記事</h2> -->
         <article class="blog-articles">
           <BaseCard
             class="blog-card"
@@ -17,6 +18,7 @@
           />
         </article>
       </div>
+      <TheProfile class="TheProfile" />
     </div>
   </div>
 </template>
@@ -46,9 +48,10 @@ export default {
 
 <style scoped>
 .main-content {
-  max-width: var(--main-width);
+  /* max-width: var(--main-width); */
 }
 .blog-container {
+  max-width: var(--main-width);
   margin-bottom: 48px;
 }
 .blog-articles {
@@ -57,6 +60,14 @@ export default {
   gap: 16px;
 }
 @media screen and (min-width: 640px) {
+  .main-content {
+    display: flex;
+    justify-content: center;
+  }
+  .TheProfile {
+    margin-left: 24px;
+    align-self: flex-start;
+  }
   .blog-articles {
     grid-template-columns: 1fr 1fr;
     gap: 24px;

@@ -1,5 +1,5 @@
 ---
-cover: pc09.jpg
+cover: IMG_0064.JPG
 title: ちいさなWebアプリを作成していく
 date: 2021/09/03
 category: 日記
