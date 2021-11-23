@@ -66,10 +66,6 @@ export default {
     display: flex;
     justify-content: center;
   }
-  .TheProfile {
-    margin-left: 24px;
-    align-self: flex-start;
-  }
   .blog-articles {
     grid-template-columns: 1fr 1fr;
     gap: 24px;

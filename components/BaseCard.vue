@@ -89,6 +89,8 @@ a {
 .Card__tags {
   margin-top: auto;
   align-self: flex-start;
+  height: 25px;
+  overflow: hidden;
 }
 @media screen and (min-width: 640px) {
   .flex {

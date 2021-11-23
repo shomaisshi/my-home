@@ -1,17 +1,31 @@
 ---
-cover: i misplaced the key somewhere_0.gif
+cover: pico-8-01.gif
 title: PICO-8で作ったゲーム「宇宙船の鍵、無くしちゃった..」
 date: 2021/03/14
-category: 開発
-tags: [game, pico-8]
+category: ポートフォリオ
+tags: [ポートフォリオ, game, pico-8]
 ---
 
-朝5時前に起きる。散歩してシャワーを浴びて、白湯を飲んでから深呼吸をする。
+PICO-8ではじめてのミニ脱出ゲームを作った。
+Baba is youや水平思考ゲームにはまっていたので、普通にはクリアできないようなゲームを作ろうと思った。
 
 <!--more-->
 
-6時から物作りを始める。作りたいイメージを形にしていく。7時くらいに朝ごはんを食べる。洗い物をして11時まで制作する。11時から散歩する。帰ってきたら本を読む。いろいろな作品をみる
+---
 
-午後になったら走りに行く。15時くらいからまた制作する。19時くらいに晩御飯を食べて、お皿洗いをする。ゆっくり家カフェをする。
+## 宇宙船の鍵、無くしちゃった..
 
-21時 深呼吸して寝る準備。21時半 就寝。
+![画像](/my-home/cover/pico-8-01.gif)
+
+ブラウザから遊べます。  
+[ブラウザで遊ぶ](http://www.shomaisshi.com/MyGames/mygame01/foo.html)
+
+```
+We came to treasure hunt by our spaceship. 
+I misplaced the keys somewhere while exploring in outer space and couldn't enter the spaceship!
+Oxygen disappears moment by moment, and the members say die ...
+
+私達は宇宙船にのってお宝を探しに来た。
+宇宙空間で探索をしてる最中に鍵をなくしてしまい宇宙船へ入れなくなってしまった！
+刻々と酸素がなくなりメンバーは弱音を吐いていく..。
+```
