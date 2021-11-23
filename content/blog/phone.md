@@ -1,9 +1,9 @@
 ---
 cover: phone14.jpg
-title: blenderで色々作った
+title: blenderで昔の電話を作ってみた。
 date: 2021/07/13
 category: 日記
-tags: [diary]
+tags: [blender]
 ---
 
 朝5時前に起きる。散歩してシャワーを浴びて、白湯を飲んでから深呼吸をする。

@@ -18,7 +18,9 @@
           />
         </article>
       </div>
-      <TheProfile class="TheProfile" />
+      <div class="sidebar">
+        <TheProfile class="TheProfile" />
+      </div>
     </div>
   </div>
 </template>
@@ -71,6 +73,17 @@ export default {
   .blog-articles {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+  }
+}
+
+/* sidebar */
+@media screen and (min-width: 640px) {
+  .sidebar {
+    max-width: 344px;
+    position: sticky;
+    top: 0;
+    margin-left: 24px;
+    align-self: flex-start;
   }
 }
 </style>

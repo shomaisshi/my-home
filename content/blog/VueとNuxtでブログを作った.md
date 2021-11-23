@@ -1,6 +1,6 @@
 ---
 cover: Paper2.png
-title: サクサク動く静的なブログ KLEENOTE（クレーノート）を作った【Vue/Nuxt】
+title: サクサク動く静的なブログ「KLEENOTE」（クレーノート）を作った。
 date: 2021/11/18
 category: 開発
 tags: [dev, vue, nuxt]

@@ -1,6 +1,6 @@
 ---
 cover: スクリーンショット 2018-08-29 23.50.46.png
-title: 2.5次元の積み木を作った
+title: 2.5次元の積み木を作った。
 date: 2018/08/10
 category: 日記
 tags: [diary, unity]

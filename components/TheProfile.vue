@@ -5,6 +5,7 @@
     <p class="Profile__p">
       KLEENOTE（クレーノート）というブログを運営しています。作ったものや、好きなものを紹介しています。
     </p>
+    <p>ご連絡はこちらのメールまでお願い致します。</p>
     <NuxtLink to="/tweet">つぶやき</NuxtLink>
   </div>
 </template>
@@ -30,9 +31,9 @@
 }
 @media screen and (min-width: 640px) {
   .Profile {
-    max-width: 296px;
+    /* max-width: 296px;
     position: sticky;
-    top: 0;
+    top: 0; */
   }
 }
 </style>

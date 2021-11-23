@@ -1,9 +1,9 @@
 ---
 cover: i misplaced the key somewhere_0.gif
-title: PICO-8で作ったゲーム
+title: PICO-8で作ったゲーム「宇宙船の鍵、無くしちゃった..」
 date: 2021/03/14
-category: 日記
-tags: [diary]
+category: 開発
+tags: [game, pico-8]
 ---
 
 朝5時前に起きる。散歩してシャワーを浴びて、白湯を飲んでから深呼吸をする。

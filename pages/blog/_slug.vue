@@ -16,7 +16,9 @@
         </div>
         <prev-next :prev="prev" :next="next" />
       </article>
-      <TheProfile class="TheProfile" />
+      <div class="sidebar">
+        <TheProfile class="TheProfile" />
+      </div>
     </div>
   </div>
 </template>
@@ -49,18 +51,6 @@ export default {
 </script>
 
 <style scoped>
-/* slug style */
-@media screen and (min-width: 640px) {
-  .slug {
-    display: flex;
-    justify-content: center;
-  }
-  .TheProfile {
-    margin-left: 24px;
-    align-self: flex-start;
-  }
-}
-
 .main-content {
   max-width: var(--main-width);
   overflow: hidden;
@@ -104,6 +94,21 @@ export default {
 @media screen and (min-width: 640px) {
   .main-content-h1 {
     font-size: 32px;
+  }
+}
+
+/* slug style */
+@media screen and (min-width: 640px) {
+  .slug {
+    display: flex;
+    justify-content: center;
+  }
+  .sidebar {
+    max-width: 344px;
+    position: sticky;
+    top: 0;
+    margin-left: 24px;
+    align-self: flex-start;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 ---
-cover: myCanvas-85.png
+cover: cafe.JPG
 title: p5js
 date: 2021/07/09
 category: 日記
