@@ -31,7 +31,8 @@ export default {
 
 <style scoped>
 img {
-  width: 30%;
+  width: 35%;
+  height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   /* object-position: 50% 90%; */
@@ -113,7 +114,7 @@ a {
   .Card__h2 {
     font-size: 20px;
     margin-bottom: 0;
-    overflow: auto;
+    overflow: hidden;
     height: auto;
   }
   @supports (-webkit-line-clamp: 3) {

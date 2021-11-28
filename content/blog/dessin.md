@@ -1,6 +1,6 @@
 ---
 cover: dessin.jpg
-title: デッサンまとめておく
+title: デッサンでの学び
 date: 2016/03/09
 category: ポートフォリオ
 tags: [ポートフォリオ]
