@@ -29,6 +29,7 @@
   /* --main-black: #525252; */
   --main-black: #333;
   --main-gray: #9f9f9f;
+  --main-mediumgray: #cdcdcd;
   --main-lightgray: #f4f4f4;
   --main-white: #fff;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.15);

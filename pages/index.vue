@@ -90,6 +90,11 @@ export default {
   grid-template-columns: 1fr;
   gap: 16px;
 }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 @media screen and (min-width: 640px) {
   .main-content {
     display: flex;
@@ -107,9 +112,6 @@ export default {
     top: 0;
     margin-left: 24px;
     align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
   }
 }
 

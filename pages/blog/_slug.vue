@@ -151,6 +151,13 @@ export default {
   }
 }
 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
 /* slug style */
 @media screen and (min-width: 640px) {
   .slug {
@@ -162,10 +169,8 @@ export default {
     position: sticky;
     top: 0;
     margin-left: 24px;
+    padding: 0;
     align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
   }
 }
 </style>

@@ -32,7 +32,7 @@ export default {
   padding: 4px 8px;
   color: var(--main-black);
   border-radius: 6px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid var(--main-mediumgray);
   box-sizing: border-box;
 }
 .Tags li::before {
