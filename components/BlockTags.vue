@@ -7,7 +7,10 @@
 <script>
 export default {
   props: {
-    tags: String,
+    tags: Array,
   },
 };
 </script>
+
+<style scoped>
+</style>

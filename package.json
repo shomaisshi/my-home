@@ -13,7 +13,8 @@
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/google-gtag": "^1.0.4",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "prism-themes": "^1.9.0"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",

@@ -30,32 +30,33 @@
   --main-black: #333;
   --main-gray: #9f9f9f;
   --main-lightgray: #f4f4f4;
+  --main-white: #fff;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  --main-width: 640px;
+  --main-width: 600px;
 }
 body {
   font-family: ui-rounded, "SF Compact Rounded", -apple-system,
     "BlinkMacSystemFont", "Hiragino Sans", Helvetica, Meiryo, sans-serif;
   color: var(--main-black);
   margin: 0;
-  /* background: #fff; */
   background: var(--main-lightgray);
 }
 a {
   text-decoration: none;
   color: var(--main-color);
 }
-
-/* index style */
 .blog-heading {
   color: var(--main-color);
 }
-/* articles */
-/* .blog-articles h1::before {
-  content: "# ";
-  color: var(--main-color);
-} */
 .about-article a {
   color: #333;
+}
+/* カードスタイル */
+.BaseCardSidebar {
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  background: #fff;
+  box-sizing: border-box;
 }
 </style>

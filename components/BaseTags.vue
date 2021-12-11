@@ -1,7 +1,11 @@
 <template>
   <div class="Tags">
     <ul>
-      <li v-for="tag in tags" :key="tag">{{ tag }}</li>
+      <li v-for="tag in tags" :key="tag">
+        <NuxtLink to="/">
+          {{ tag }}
+        </NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
@@ -40,5 +44,8 @@ export default {
   height: 12px;
   vertical-align: -1.5px;
   opacity: 0.7;
+}
+.Tags a {
+  color: var(--main-black);
 }
 </style>

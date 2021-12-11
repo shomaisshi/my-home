@@ -1,6 +1,6 @@
 ---
 cover: dessin.jpg
-title: デッサンでの学び
+title: 昔のもの
 date: 2016/03/09
 category: ポートフォリオ
 tags: [ポートフォリオ]

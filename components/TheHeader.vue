@@ -8,18 +8,11 @@
     <nav class="nav">
       <!-- <NuxtLink to="/works">works</NuxtLink> -->
       <!-- <NuxtLink to="/blog">blog</NuxtLink> -->
-      <NuxtLink to="/about">about</NuxtLink>
+      <BaseSearch />
+      <!-- <NuxtLink to="/about">about</NuxtLink> -->
     </nav>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {};
-  },
-};
-</script>
 
 <style scoped>
 .Header {

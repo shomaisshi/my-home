@@ -1,5 +1,5 @@
 <template>
-  <div class="Profile">
+  <div class="Profile BaseCardSidebar">
     <div class="Profile__header">
       <img
         class="Profile__img"
@@ -20,14 +20,6 @@
 </template>
 
 <style scoped>
-.Profile {
-  padding: 16px;
-  border-radius: 12px;
-  /* border: 1px solid #cdcdcd; */
-  box-shadow: var(--shadow);
-  background: #fff;
-  box-sizing: border-box;
-}
 .Profile__header {
   display: flex;
   align-items: center;

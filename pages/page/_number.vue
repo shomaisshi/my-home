@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h2 class="main__heading">{{ mainHeading }}</h2>
+    <h2 class="main__heading">新着記事</h2>
     <div class="main-content">
       <div class="blog-container">
         <article class="blog-articles">
           <BaseCard
             class="blog-card"
-            v-for="(article, index) in blogArticles"
+            v-for="(article, index) in posts"
             :key="index"
             :cover="article.cover"
             :title="article.title"
@@ -17,8 +17,11 @@
             :slug="{ name: 'blog-slug', params: { slug: article.slug } }"
           />
         </article>
-        <section id="next">
-          <nuxt-link to="/page/2"> Next page </nuxt-link>
+        <section id="prev-next">
+          <nuxt-link :to="prevLink">Prev page</nuxt-link>
+          <nuxt-link v-if="nextPage" :to="`/page/${pageNo + 1}`"
+            >Next page</nuxt-link
+          >
         </section>
       </div>
       <div class="sidebar">
@@ -33,8 +36,9 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const blogArticles = await $content("blog", params.slug)
+  async asyncData({ $content, params, error }) {
+    const pageNo = parseInt(params.number);
+    const tenPosts = await $content("blog", params.slug)
       .only([
         "cover",
         "title",
@@ -45,27 +49,22 @@ export default {
         "slug",
       ])
       .sortBy("date", "desc")
-      .limit(6)
-      .fetch();
-    const nextPage = blogArticles.length === 10;
-    const posts = nextPage ? blogArticles.slice(0, -1) : blogArticles;
-
-    const tags = await $content("blog", params.slug)
-      .only(["tags"])
-      .limit(4)
+      .limit(7)
+      .skip(6 * (pageNo - 1))
       .fetch();
 
-    return {
-      blogArticles,
-      tags,
-      posts,
-    };
+    if (!tenPosts.length) {
+      return error({ statusCode: 404, message: "No posts found!" });
+    }
+
+    const nextPage = tenPosts.length === 7;
+    const posts = nextPage ? tenPosts.slice(0, -1) : tenPosts;
+    return { nextPage, posts, pageNo };
   },
-
-  data() {
-    return {
-      mainHeading: "新着記事",
-    };
+  computed: {
+    prevLink() {
+      return this.pageNo === 2 ? "/" : `/page/${this.pageNo - 1}`;
+    },
   },
 };
 </script>

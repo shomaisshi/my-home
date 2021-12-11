@@ -1,23 +1,30 @@
 <template>
   <div>
     <div class="slug">
-      <article class="main-content">
-        <img
-          class="main-content-img"
-          :src="`/my-home/cover/${article.cover}`"
-          alt="カバー画像"
-        />
-        <div class="main-contentContainer">
-          <p class="main-content-date">{{ article.date }}</p>
-          <h1 class="main-content-h1">{{ article.title }}</h1>
-          <BaseCategory>{{ article.category }}</BaseCategory>
-          <nuxt-content :document="article" />
-          <BaseTags :tags="article.tags" class="main-content-tags" />
-        </div>
-        <prev-next :prev="prev" :next="next" />
-      </article>
+      <div>
+        <article class="main-content">
+          <img
+            class="main-content-img"
+            :src="`/my-home/cover/${article.cover}`"
+            alt="カバー画像"
+          />
+          <div class="main-contentContainer">
+            <p class="main-content-date">{{ article.date }}</p>
+            <h1 class="main-content-h1">{{ article.title }}</h1>
+            <BaseCategory>{{ article.category }}</BaseCategory>
+            <nuxt-content :document="article" />
+            <BaseTags :tags="article.tags" class="main-content-tags" />
+          </div>
+          <prev-next :prev="prev" :next="next" />
+        </article>
+
+        <!-- 新着一覧 -->
+      </div>
       <div class="sidebar">
         <TheProfile class="TheProfile" />
+        <BlockProduct />
+        <BlockCategories />
+        <!-- <BlockTags v-for="tag in tags" :key="tag.slug" :tags="tag.tags" /> -->
       </div>
     </div>
   </div>
@@ -25,6 +32,53 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.article.title + " | KLEENOTE（クレーノート）",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.article.description,
+        },
+        {
+          hid: "og:site_name",
+          property: "og:site_name",
+          content: "KLEENOTEE（クレーノート）",
+        },
+        { hid: "og:type", property: "og:type", content: "article" },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content:
+            "https://shomaisshi.github.io/my-home/blog/" + this.article.slug,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.article.title,
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.article.description,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.article.cover,
+        },
+
+        // { hid: 'fb:app_id', property: 'fb:app_id', content: 'App-ID' },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        { hid: "twitter:site", name: "twitter:site", content: "@shomaisshi" },
+      ],
+    };
+  },
   async asyncData({ $content, params }) {
     const article = await $content("blog", params.slug).fetch();
 
@@ -109,6 +163,9 @@ export default {
     top: 0;
     margin-left: 24px;
     align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }
 </style>
@@ -125,10 +182,16 @@ export default {
   /* border-bottom: 2px dashed var(--main-color); */
 }
 .nuxt-content h3 {
+  margin-top: 40px;
   font-size: 20px;
 }
+.nuxt-content h4 {
+  margin: 0;
+  margin-top: 40px;
+  font-size: 16px;
+}
 .nuxt-content p {
-  margin-top: 32px;
+  /* margin: 0; */
   font-size: 16px;
   line-height: 1.8;
 }
@@ -140,6 +203,7 @@ export default {
 .nuxt-content img {
   /* height: 324px; */
   width: 100%;
+  border-radius: 4px;
 }
 .nuxt-content hr {
   margin-top: 32px;
@@ -174,12 +238,25 @@ export default {
   box-sizing: border-box;
   border: solid 1px #d6dde4;
 }
+.nuxt-content blockquote {
+  margin: 8px 0;
+  padding: 24px 32px;
+  background: var(--main-lightgray);
+  border-radius: 4px;
+}
+.nuxt-content blockquote > p {
+  margin: 0;
+  font-size: 15px;
+}
 @media screen and (min-width: 640px) {
   .nuxt-content h2 {
     font-size: 28px;
   }
   .nuxt-content h3 {
     font-size: 24px;
+  }
+  .nuxt-content h4 {
+    font-size: 18px;
   }
   .nuxt-content p,
   .nuxt-content ul {
