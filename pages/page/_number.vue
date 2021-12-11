@@ -17,11 +17,16 @@
             :slug="{ name: 'blog-slug', params: { slug: article.slug } }"
           />
         </article>
-        <section id="prev-next">
-          <nuxt-link :to="prevLink">Prev page</nuxt-link>
-          <nuxt-link v-if="nextPage" :to="`/page/${pageNo + 1}`"
-            >Next page</nuxt-link
-          >
+        <section id="prev-next" class="PrevNext">
+          <nuxt-link :to="prevLink">＜</nuxt-link>
+          <nuxt-link :to="prevLink">{{ pageNo - 1 }}</nuxt-link>
+          <span class="PrevNext__current">{{ pageNo }}</span>
+          <nuxt-link v-if="nextPage" :to="`/page/${pageNo + 1}`">{{
+            pageNo + 1
+          }}</nuxt-link>
+          <nuxt-link v-if="nextPage" :to="`/page/${pageNo + 1}`">
+            ＞
+          </nuxt-link>
         </section>
       </div>
       <div class="sidebar">
@@ -107,5 +112,26 @@ export default {
     flex-direction: column;
     gap: 16px;
   }
+}
+
+/* pagination */
+.PrevNext {
+  margin-top: 48px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.PrevNext__current {
+  font-weight: bold;
+  color: #fff;
+  background: var(--main-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.PrevNext a {
+  padding: 8px 16px;
+  border-radius: 4px;
 }
 </style>
