@@ -1,7 +1,7 @@
 <template>
   <!-- HeaderImage -->
   <div class="HeaderImage">
-    <img src="/my-home/cover/IMG_0976.jpg" alt="ヘッダー画像" />
+    <img src="/my-home/cover/IMG_4481.JPG" alt="ヘッダー画像" />
   </div>
 </template>
 
@@ -11,5 +11,10 @@
   width: 100%;
   height: 264px;
   object-fit: cover;
+}
+@media screen and (min-width: 640px) {
+  .HeaderImage img {
+    height: 400px;
+  }
 }
 </style>

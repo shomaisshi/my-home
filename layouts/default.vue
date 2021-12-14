@@ -40,7 +40,7 @@ body {
     "BlinkMacSystemFont", "Hiragino Sans", Helvetica, Meiryo, sans-serif;
   color: var(--main-black);
   margin: 0;
-  background: var(--main-lightgray);
+  background: url(~assets/icons/star.gif) var(--main-lightgray);
 }
 a {
   text-decoration: none;

@@ -78,6 +78,7 @@ export default {
 .main__heading {
   max-width: 968px;
   margin: 16px auto;
+  color: var(--main-white);
 }
 .main-content {
   /* max-width: var(--main-width); */

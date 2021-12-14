@@ -53,7 +53,7 @@ a {
 }
 .Card {
   border-radius: 12px;
-  /* border: 1px solid #cdcdcd; */
+  border: 2px solid #cdcdcd;
   box-shadow: var(--shadow);
   transition: 0.3s;
   background: #fff;
