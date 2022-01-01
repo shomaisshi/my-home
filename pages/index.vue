@@ -27,7 +27,7 @@
       <div class="sidebar">
         <TheProfile class="TheProfile" />
         <BlockProduct />
-        <BlockCategories />
+        <!-- <BlockCategories /> -->
         <!-- <BlockTags v-for="tag in tags" :key="tag.slug" :tags="tag.tags" /> -->
       </div>
     </div>
@@ -77,7 +77,7 @@ export default {
 .main__heading {
   max-width: 968px;
   margin: 16px auto;
-  color: var(--main-white);
+  /* color: var(--main-white); */
 }
 .main-content {
   /* max-width: var(--main-width); */

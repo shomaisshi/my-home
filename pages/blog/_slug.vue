@@ -23,7 +23,7 @@
       <div class="sidebar">
         <TheProfile class="TheProfile" />
         <BlockProduct />
-        <BlockCategories />
+        <!-- <BlockCategories /> -->
         <!-- <BlockTags v-for="tag in tags" :key="tag.slug" :tags="tag.tags" /> -->
       </div>
     </div>

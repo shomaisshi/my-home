@@ -1,7 +1,7 @@
 <template>
   <!-- HeaderImage -->
   <div class="HeaderImage">
-    <img src="/my-home/cover/IMG_4481.JPG" alt="ヘッダー画像" />
+    <img src="/my-home/cover/IMG_0151.JPG" alt="ヘッダー画像" />
   </div>
 </template>
 

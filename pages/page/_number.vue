@@ -32,7 +32,7 @@
       <div class="sidebar">
         <TheProfile class="TheProfile" />
         <BlockProduct />
-        <BlockCategories />
+        <!-- <BlockCategories /> -->
         <!-- <BlockTags v-for="tag in tags" :key="tag.slug" :tags="tag.tags" /> -->
       </div>
     </div>
@@ -54,15 +54,15 @@ export default {
         "slug",
       ])
       .sortBy("date", "desc")
-      .limit(7)
-      .skip(6 * (pageNo - 1))
+      .limit(11)
+      .skip(10 * (pageNo - 1))
       .fetch();
 
     if (!tenPosts.length) {
       return error({ statusCode: 404, message: "No posts found!" });
     }
 
-    const nextPage = tenPosts.length === 7;
+    const nextPage = tenPosts.length === 11;
     const posts = nextPage ? tenPosts.slice(0, -1) : tenPosts;
     return { nextPage, posts, pageNo };
   },
@@ -78,7 +78,7 @@ export default {
 .main__heading {
   max-width: 968px;
   margin: 16px auto;
-  color: var(--main-white);
+  /* color: var(--main-white); */
 }
 .main-content {
   /* max-width: var(--main-width); */
