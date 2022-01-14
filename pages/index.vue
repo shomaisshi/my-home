@@ -48,7 +48,7 @@ export default {
         "slug",
       ])
       .sortBy("date", "desc")
-      .limit(6)
+      .limit(10)
       .fetch();
     const nextPage = blogArticles.length === 10;
     const posts = nextPage ? blogArticles.slice(0, -1) : blogArticles;
