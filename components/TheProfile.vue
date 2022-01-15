@@ -15,7 +15,7 @@
       KLEENOTE（クレーノート）というブログを運営しています。作ったものや、好きなものを紹介しています。
     </p>
     <p>ご連絡はこちらのメールまでお願い致します。</p>
-    <NuxtLink to="/tweet">つぶやき</NuxtLink>
+    <NuxtLink to="/PagePortfolio">→リリースしたアプリ一覧</NuxtLink>
   </div>
 </template>
 
