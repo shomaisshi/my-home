@@ -1,6 +1,6 @@
 ---
 cover: dessin.jpg
-title: 昔のもの
+title: デッサン
 date: 2016/03/09
 category: ポートフォリオ
 tags: [ポートフォリオ]

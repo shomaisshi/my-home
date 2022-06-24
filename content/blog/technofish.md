@@ -1,13 +1,15 @@
 ---
-cover: technofish01.gif
-title: technofish
+cover: fish_shooter.gif
+title: Fish shooter
 date: 2022/02/17
 category: アイデア
-tags: [アイデア, 日記]
+tags: [ゲーム, アイデア]
 ---
 
-コンセプト
 音のビームを発射する魚、「テクノフィッシュ」を仲間にして敵を倒し、資源を集めるシューティングゲーム
+
+<!--more-->
+
 悪い人口魚に壊されてしまった潜水艦を直し地上へ戻るため、資源を集める
 いかにたくさんの魚を仲間にできるかが攻略のポイント
 海の中を探索して、資源を集める
