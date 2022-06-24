@@ -41,6 +41,15 @@ $ yarn dev
 
 あとはnuxt contentを入れて、マークダウンで記事を書き、コンポーネントベースでサイトのデザインをゴリゴリ作っていく。nuxt contentの使い方はNuxtの[ブログ](https://nuxtjs.org/tutorials/creating-blog-with-nuxt-content/)がわかりやすい。
 
+Gitでブランチを作成して以下のコマンドで `dist` フォルダをGithub Pagesに更新できる。
+詳しくは、https://nuxtjs.org/ja/deployments/github-pages/ を参照
+
+```
+$ yarn generate
+$ yarn deploy
+```
+
+
 ---
 
 ## ブログのコンセプト
