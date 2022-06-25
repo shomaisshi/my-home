@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheHeader />
-    <TheHeaderImage />
+    <!-- <TheHeaderImage /> -->
     <main class="main">
       <Nuxt />
     </main>

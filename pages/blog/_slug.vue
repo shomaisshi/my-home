@@ -3,11 +3,11 @@
     <div class="slug">
       <div>
         <article class="main-content">
-          <img
+          <!-- <img
             class="main-content-img"
             :src="`/my-home/cover/${article.cover}`"
             alt="カバー画像"
-          />
+          /> -->
           <div class="main-contentContainer">
             <p class="main-content-date">{{ article.date }}</p>
             <h1 class="main-content-h1">{{ article.title }}</h1>
@@ -124,6 +124,7 @@ export default {
   margin-bottom: 24px;
 }
 .main-content-date {
+  margin-top: 0;
   font-size: 14px;
   color: var(--main-gray);
 }

@@ -102,8 +102,8 @@ export default {
     justify-content: center;
   }
   .blog-articles {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    /* grid-template-columns: 1fr 1fr;
+    gap: 24px; */
   }
 
   /* sidebar */

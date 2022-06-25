@@ -2,7 +2,7 @@
   <div class="Card">
     <NuxtLink :to="slug">
       <div class="flex">
-        <img :src="`/my-home/cover/${cover}`" alt="カバー画像" />
+        <!-- <img :src="`/my-home/cover/${cover}`" alt="カバー画像" /> -->
         <div class="padding">
           <p class="Card__date">{{ date }}</p>
           <h2 class="Card__h2">{{ title }}</h2>
@@ -85,7 +85,7 @@ a {
   }
 }
 .Card__p {
-  display: none;
+  /* display: none; */
 }
 .Card__tags {
   margin-top: auto;
