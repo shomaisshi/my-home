@@ -25,7 +25,7 @@
 
 <style>
 :root {
-  --main-color: #d95e4d;
+  --main-color: #0262f2;
   /* --main-black: #525252; */
   --main-black: #333;
   --main-gray: #9f9f9f;
@@ -33,14 +33,15 @@
   --main-lightgray: #f4f4f4;
   --main-white: #fff;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  --main-width: 600px;
+  --main-width: 720px;
 }
 body {
   font-family: ui-rounded, "SF Compact Rounded", -apple-system,
     "BlinkMacSystemFont", "Hiragino Sans", Helvetica, Meiryo, sans-serif;
   color: var(--main-black);
   margin: 0;
-  background: var(--main-lightgray);
+  background: var(--main-white);
+  /* background: var(--main-lightgray); */
   /* background: url(~assets/icons/star.gif) var(--main-lightgray); */
 }
 a {
@@ -57,7 +58,7 @@ a {
 .BaseCardSidebar {
   padding: 16px;
   border-radius: 12px;
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow); */
   background: #fff;
   box-sizing: border-box;
 }

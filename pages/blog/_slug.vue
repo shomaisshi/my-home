@@ -114,7 +114,7 @@ export default {
 @media screen and (min-width: 640px) {
   .main-content {
     /* border: 1px solid #cdcdcd; */
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
     border-radius: 12px;
   }
 }

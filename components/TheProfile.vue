@@ -11,10 +11,7 @@
         <p class="Profile__occupation">Developer / Designer</p>
       </div>
     </div>
-    <p>
-      KLEENOTE（クレーノート）というブログを運営しています。作ったものや、好きなものを紹介しています。
-    </p>
-    <p>ご連絡はこちらのメールまでお願い致します。</p>
+    <p>作った物や好きなものの紹介、技術メモなど。</p>
     <NuxtLink to="/PagePortfolio">→リリースしたアプリ一覧</NuxtLink>
   </div>
 </template>

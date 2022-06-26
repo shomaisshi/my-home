@@ -53,8 +53,8 @@ a {
 }
 .Card {
   border-radius: 12px;
-  /* border: 2px solid #cdcdcd; */
-  box-shadow: var(--shadow);
+  border: 1px solid #cdcdcd;
+  /* box-shadow: var(--shadow); */
   transition: 0.3s;
   background: #fff;
   box-sizing: border-box;
