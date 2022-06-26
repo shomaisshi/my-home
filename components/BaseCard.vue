@@ -60,7 +60,7 @@ a {
   box-sizing: border-box;
 }
 .Card__date {
-  display: none;
+  /* display: none; */
   margin: 0;
   margin-bottom: 8px;
   font-size: 14px;
@@ -85,6 +85,8 @@ a {
   }
 }
 .Card__p {
+  font-size: 14px;
+  color: var(--main-gray);
   /* display: none; */
 }
 .Card__tags {
@@ -123,8 +125,6 @@ a {
     }
   }
   .Card__p {
-    font-size: 14px;
-    color: var(--main-gray);
     /* ...で省略する */
     display: block;
     overflow: hidden;

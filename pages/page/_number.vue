@@ -76,7 +76,7 @@ export default {
 
 <style scoped>
 .main__heading {
-  max-width: 968px;
+  max-width: 1080px;
   margin: 16px auto;
   /* color: var(--main-white); */
 }

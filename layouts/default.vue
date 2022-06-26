@@ -28,7 +28,7 @@
   --main-color: #0262f2;
   /* --main-black: #525252; */
   --main-black: #333;
-  --main-gray: #9f9f9f;
+  --main-gray: #858585;
   --main-mediumgray: #cdcdcd;
   --main-lightgray: #f4f4f4;
   --main-white: #fff;
