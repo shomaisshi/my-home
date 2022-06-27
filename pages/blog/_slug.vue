@@ -181,10 +181,10 @@ export default {
 .nuxt-content h2 {
   /* color: var(--main-color); */
   margin-top: 40px;
-  padding-left: 8px;
+  /* padding-left: 8px; */
   /* padding-bottom: 8px; */
   font-size: 24px;
-  border-left: 8px solid var(--main-color);
+  /* border-left: 8px solid var(--main-color); */
   /* border-bottom: 2px dashed var(--main-color); */
 }
 .nuxt-content h3 {
