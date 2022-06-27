@@ -64,4 +64,11 @@ $ yarn deploy
 
 ---
 
+Lighthouseでサイトのパフォーマンスを見てみるといい感じだった。
+画像は全てWebpにすることにした。
+
+![画像](/my-home/cover/blog-performance..webp)
+
+---
+
 [KLEENOTE（クレーノート）](https://shomaisshi.github.io/my-home/)
