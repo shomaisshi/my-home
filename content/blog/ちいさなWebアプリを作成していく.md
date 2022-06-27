@@ -1,9 +1,7 @@
 ---
-cover: IMG_0064.JPG
 title: ちいさなWebアプリを作成していく
 date: 2021/09/03
-category: 日記
-tags: [diary]
+tags: [日記]
 ---
 
 仕事の息抜きに個人プロジェクトとして、1週間くらいで作れる規模のものを制作していく。
@@ -21,7 +19,7 @@ tags: [diary]
 - Nuxtを使ったメディアサイト運営経験
 - 仕事の息抜きに
 
-![画像](/my-home/cover/Paper.png)
+![画像](/my-home/cover/Paper.webp)
 
 ### SNSやブログサイトではない理由
 - メディア自体をデザインしたい

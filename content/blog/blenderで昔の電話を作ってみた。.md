@@ -1,5 +1,5 @@
 ---
-cover: phone14.jpg
+cover: phone14.webp
 title: blenderで昔の電話を作った。
 date: 2021/07/13
 category: ポートフォリオ
@@ -10,7 +10,7 @@ AppleのPower Macintosh G3のように、カラーバリエーションのある
 
 <!--more-->
 
-![画像](/my-home/cover/phone13.jpg)
-![画像](/my-home/cover/phone14.jpg)
+![画像](/my-home/cover/phone13.webp)
+![画像](/my-home/cover/phone14.webp)
 
 青い電話の質感が気に入ってる。

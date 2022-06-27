@@ -1,5 +1,5 @@
 ---
-cover: Paper2.png
+cover: Paper2.webp
 title: サクサク動く静的なブログ「KLEENOTE」を作った。
 date: 2021/11/18
 category: ポートフォリオ
@@ -9,7 +9,7 @@ tags: [ポートフォリオ, 技術, vue, nuxt]
 今回はVue・Nuxtを使ってブログを作成してみた。nuxt contentモジュールを使うことで、マークダウンファイルで記事を管理して、静的なブログをGithub Pagesにアップロードしている。
 Webサイトを作るのは、秘密基地を作ってるみたいで楽しい。
 
-![画像](/my-home/cover/webスクリーンショット.png)
+![画像](/my-home/cover/webスクリーンショット.webp)
 
 [KLEENOTE（クレーノート）](https://shomaisshi.github.io/my-home/)
 

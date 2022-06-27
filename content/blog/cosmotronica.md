@@ -1,5 +1,5 @@
 ---
-cover: IMG_0246.JPG
+cover: IMG_0246.webp
 title: consmotronica
 description: 物理×エレクトロミュージック
 date: 2020/12/20
@@ -9,7 +9,7 @@ tags: [ポートフォリオ, unity]
 
 
 
-![画像](/my-home/cover/consmotronica.jpg)
+![画像](/my-home/cover/consmotronica.webp)
 
 
 ## 物理×エレクトロミュージック

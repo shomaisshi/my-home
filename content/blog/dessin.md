@@ -1,5 +1,5 @@
 ---
-cover: dessin.jpg
+cover: dessin.webp
 title: デッサン
 date: 2016/03/09
 category: ポートフォリオ
@@ -10,3 +10,4 @@ tags: [ポートフォリオ]
 
 <!--more-->
 
+![画像](/my-home/cover/dessin.webp)

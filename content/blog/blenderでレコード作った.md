@@ -1,5 +1,5 @@
 ---
-cover: record13.jpg
+cover: record13.webp
 title: blenderでレコードプレーヤーを作った。
 date: 2021/07/12
 category: ポートフォリオ
@@ -10,4 +10,4 @@ blenderでレコードプレーヤーを作った。
 
 <!--more-->
 
-![画像](/my-home/cover/record13.jpg)
+![画像](/my-home/cover/record13.webp)
